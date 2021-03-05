@@ -12,13 +12,14 @@ This program is not intended to be installed like a normal go program. The inten
 ### Basic Example
 To make a shortcut for a second Firefox profile (called "work-profile" in this example)
 
-1. Build the executable `go build -o workFirefoxProfile.exe`
-2. Right-click the executable and click `Send to > Desktop (create shortcut)`
-3. Navigate to your desktop
-4. Right-click the new shortcut and click `Properties`
-5. Change the `Target` field to something like this: `"path-to-workFirefoxProfile.exe" "C:\Program Files\Mozilla Firefox\firefox.exe" -P "work-profile"`
-6. Press the keys `WIN + R` and type `%appdata%\Microsoft\Windows\Start Menu\Programs` then press enter
-7. Copy your new shortcut into this folder
+1. Download the launcher from the [releases page](https://github.com/therobut/launcher/releases)
+2. Rename the exectuable to a unique name. For our example: `workFirefoxProfile.exe`
+3. Right-click the executable and click `Send to > Desktop (create shortcut)`
+4. Navigate to your desktop
+5. Right-click the new shortcut and click `Properties`
+6. Change the `Target` field to something like this: `"path-to-workFirefoxProfile.exe" "C:\Program Files\Mozilla Firefox\firefox.exe" -P "work-profile"`
+7. Press the keys `WIN + R` and type `%appdata%\Microsoft\Windows\Start Menu\Programs` then press enter
+8. Copy your new shortcut into this folder
 
 Now your new shortcut should show up in your start menu!
 
@@ -29,6 +30,6 @@ To build the executable with an icon, do the following
 2. navigate back to the launcher source directory
 3. copy your *.ico file into the launcher source directory
 4. run `rsrc -ico ICON_FILE.ico`
-5. build the executable `go build -o workFirefoxProfile.exe`
+5. build the executable `go build -o launcher.exe`
 
 rsrc generates a `.syso` file which includes information about the icon. Go will automatically use the file when building the executable.
